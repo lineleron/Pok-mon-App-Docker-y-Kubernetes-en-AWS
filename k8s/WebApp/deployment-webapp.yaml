@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels:
+    app: webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels: 
+        app: webapp
+    spec: 
+      containers:
+      - name: webapp
+        image: <ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/blockstellart/webapp:latest # Elimina <ACCOUNT_ID> y utiliza el id de tu cuenta en AWS
+        ports: 
+        - containerPort: 80
+        env: 
+        - name: API_NODE
+          value: "http://127.0.0.1:90/api/"
+        - name: API_NET
+          value: "http://127.0.0.1:8080/api/"
+      imagePullSecrets:
+        - name: ecr-secret

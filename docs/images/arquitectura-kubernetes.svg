@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="920" viewBox="0 0 1280 920" role="img" aria-labelledby="title desc">
+<title id="title">Arquitectura de Kubernetes</title><desc id="desc">El navegador recibe la WebApp y consulta PokéAPI y las dos API. Node.js accede a MongoDB y .NET utiliza Amazon SES. Los componentes se pueden distribuir entre nodos.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#475569"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#0f172a}.title{font-size:34px;font-weight:700}.subtitle{font-size:18px;fill:#475569}.label{font-size:22px;font-weight:700}.detail{font-size:18px;fill:#475569}.small{font-size:16px;fill:#475569}.line{fill:none;stroke:#475569;stroke-width:2.5;marker-end:url(#arrow)}</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="50" y="65" class="title" text-anchor="start">Arquitectura de Kubernetes</text>
+<text x="50" y="99" class="subtitle" text-anchor="start">Flujo de peticiones y responsabilidades de cada componente</text>
+<rect x="40" y="145" width="250" height="95" rx="14" fill="#fefce8" stroke="#fde047" stroke-width="2"/>
+<text x="165.0" y="179" class="label" text-anchor="middle">PokéAPI</text>
+<text x="165.0" y="207" class="detail" text-anchor="middle">Servicio externo</text>
+<rect x="480" y="145" width="320" height="95" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+<text x="640.0" y="179" class="label" text-anchor="middle">Navegador</text>
+<text x="640.0" y="207" class="detail" text-anchor="middle">Angular se ejecuta aquí</text>
+<path d="M480 190H305" class="line"/>
+<text x="385" y="174" class="small" text-anchor="middle">Consulta Pokémon</text>
+<rect x="280" y="295" width="720" height="540" rx="24" fill="#f8fbff" stroke="#60a5fa" stroke-width="3"/>
+<text x="310" y="332" class="label" text-anchor="start">CLUSTER KUBERNETES</text>
+<rect x="480" y="360" width="320" height="100" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="640.0" y="394" class="label" text-anchor="middle">WebApp · 1 Pod</text>
+<text x="640.0" y="422" class="detail" text-anchor="middle">Nginx sirve Angular</text>
+<text x="640.0" y="446" class="detail" text-anchor="middle">Service: webapp</text>
+<path d="M640 360V255" class="line"/>
+<text x="655" y="284" class="small" text-anchor="start">HTML, CSS y JavaScript</text>
+<rect x="330" y="530" width="280" height="100" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="470.0" y="564" class="label" text-anchor="middle">API Node.js · 2 Pods</text>
+<text x="470.0" y="592" class="detail" text-anchor="middle">Express + Mongoose</text>
+<text x="470.0" y="616" class="detail" text-anchor="middle">Service: apinode</text>
+<rect x="680" y="530" width="280" height="100" rx="14" fill="#faf5ff" stroke="#c4b5fd" stroke-width="2"/>
+<text x="820.0" y="564" class="label" text-anchor="middle">API .NET · 2 Pods</text>
+<text x="820.0" y="592" class="detail" text-anchor="middle">ASP.NET Core 8</text>
+<text x="820.0" y="616" class="detail" text-anchor="middle">Service: apinet</text>
+<path d="M480 215H250V580H315" class="line"/>
+<text x="240" y="464" class="small" text-anchor="end">Guardar / listar / eliminar</text>
+<path d="M800 215H1015V485H820V515" class="line"/>
+<text x="1028" y="300" class="small" text-anchor="start">Verificar correo</text>
+<text x="1028" y="325" class="small" text-anchor="start">y compartir lista</text>
+<rect x="330" y="710" width="280" height="90" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="470.0" y="744" class="label" text-anchor="middle">MongoDB · 1 Pod</text>
+<text x="470.0" y="772" class="detail" text-anchor="middle">Service: mongodb</text>
+<path d="M470 630V695" class="line"/>
+<text x="485" y="669" class="small" text-anchor="start">Acceso interno</text>
+<rect x="1040" y="530" width="210" height="100" rx="14" fill="#fff1f2" stroke="#fda4af" stroke-width="2"/>
+<text x="1145.0" y="564" class="label" text-anchor="middle">Amazon SES</text>
+<text x="1145.0" y="592" class="detail" text-anchor="middle">Servicio externo</text>
+<path d="M960 580H1025" class="line"/>
+<text x="640" y="876" class="detail" text-anchor="middle">Esquema lógico: Kubernetes decide en qué nodos coloca los Pods.</text>
+</svg>

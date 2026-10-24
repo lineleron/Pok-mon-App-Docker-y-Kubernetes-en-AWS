@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apinet
+  labels:
+    app: apinet
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: apinet
+  template: 
+    metadata:
+      labels:
+        app: apinet
+    spec:
+      containers:
+      - name: apinet
+        image: <ACCOUNT_ID> .dkr.ecr.us-east-1.amazonaws.com/blockstellart/service-net:latest # Elimina <ACCOUNT_ID> y utiliza el id de tu cuenta en AWS
+        ports: 
+        - containerPort: 8080
+        env: 
+        - name: AWS_ACCESS_KEY_ID
+          value: ""
+        - name: AWS_SECRET_ACCESS_KEY
+          value: ""
+        - name: AWS_REGION
+          value: ""
+        - name: EMAILVERIFICADO
+          value: ""
+      imagePullSecrets:
+        - name: ecr-secret

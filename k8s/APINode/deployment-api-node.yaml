@@ -1,0 +1,28 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: apinode
+  labels:
+    app: apinode
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apinode
+  template: 
+    metadata:
+      labels: 
+        app: apinode
+    spec:
+      containers: 
+        - name: apinode
+          image: <ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/blockstellart/service-node:latest  # Elimina <ACCOUNT_ID> y utiliza el id de tu cuenta en AWS
+          ports: 
+          - containerPort: 3000
+          env: 
+          - name: PORT 
+            value: "3000"
+          - name: MONGO_URI
+            value: "mongodb://admin:adminpassword@mongodb:27017/blockstellart?authSource=admin"
+      imagePullSecrets:
+        - name: ecr-secret 

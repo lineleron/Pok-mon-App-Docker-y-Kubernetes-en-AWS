@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+<title id="title">Servicios, puertos y réplicas</title><desc id="desc">WebApp: LoadBalancer 85 a 80, una réplica. Node.js: LoadBalancer 90 a 3000, dos réplicas. MongoDB: ClusterIP 27017 a 27017, una réplica. .NET: LoadBalancer 8080 a 8080, dos réplicas.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#475569"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#0f172a}.title{font-size:34px;font-weight:700}.subtitle{font-size:18px;fill:#475569}.label{font-size:22px;font-weight:700}.detail{font-size:18px;fill:#475569}.small{font-size:16px;fill:#475569}.line{fill:none;stroke:#475569;stroke-width:2.5;marker-end:url(#arrow)}</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="50" y="65" class="title" text-anchor="start">Servicios, puertos y réplicas</text>
+<text x="50" y="99" class="subtitle" text-anchor="start">Los valores corresponden a los manifiestos incluidos en k8s/</text>
+<rect x="455" y="140" width="490" height="90" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+<text x="700.0" y="174" class="label" text-anchor="middle">Navegador del usuario</text>
+<text x="700.0" y="202" class="detail" text-anchor="middle">Accede a los servicios publicados</text>
+<rect x="30" y="300" width="1340" height="385" rx="24" fill="#f8fbff" stroke="#60a5fa" stroke-width="3"/>
+<text x="55" y="336" class="label" text-anchor="start">CLUSTER KUBERNETES</text>
+<rect x="60" y="385" width="260" height="100" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="190.0" y="419" class="label" text-anchor="middle">WebApp</text>
+<text x="190.0" y="447" class="detail" text-anchor="middle">1 réplica</text>
+<text x="190.0" y="471" class="detail" text-anchor="middle">Puerto contenedor: 80</text>
+<rect x="60" y="550" width="260" height="100" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+<text x="190.0" y="584" class="label" text-anchor="middle">LoadBalancer</text>
+<text x="190.0" y="612" class="detail" text-anchor="middle">85 → 80</text>
+<text x="190.0" y="636" class="detail" text-anchor="middle">Service → contenedor</text>
+<path d="M190 550V500" class="line"/>
+<rect x="400" y="385" width="260" height="100" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="530.0" y="419" class="label" text-anchor="middle">API Node.js</text>
+<text x="530.0" y="447" class="detail" text-anchor="middle">2 réplicas</text>
+<text x="530.0" y="471" class="detail" text-anchor="middle">Puerto contenedor: 3000</text>
+<rect x="400" y="550" width="260" height="100" rx="14" fill="#ffffff" stroke="#86efac" stroke-width="2"/>
+<text x="530.0" y="584" class="label" text-anchor="middle">LoadBalancer</text>
+<text x="530.0" y="612" class="detail" text-anchor="middle">90 → 3000</text>
+<text x="530.0" y="636" class="detail" text-anchor="middle">Service → contenedor</text>
+<path d="M530 550V500" class="line"/>
+<rect x="740" y="385" width="260" height="100" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="870.0" y="419" class="label" text-anchor="middle">MongoDB</text>
+<text x="870.0" y="447" class="detail" text-anchor="middle">1 réplica</text>
+<text x="870.0" y="471" class="detail" text-anchor="middle">Puerto contenedor: 27017</text>
+<rect x="740" y="550" width="260" height="100" rx="14" fill="#ffffff" stroke="#86efac" stroke-width="2"/>
+<text x="870.0" y="584" class="label" text-anchor="middle">ClusterIP</text>
+<text x="870.0" y="612" class="detail" text-anchor="middle">27017 → 27017</text>
+<text x="870.0" y="636" class="detail" text-anchor="middle">Service → contenedor</text>
+<path d="M870 550V500" class="line"/>
+<rect x="1080" y="385" width="260" height="100" rx="14" fill="#faf5ff" stroke="#c4b5fd" stroke-width="2"/>
+<text x="1210.0" y="419" class="label" text-anchor="middle">API .NET</text>
+<text x="1210.0" y="447" class="detail" text-anchor="middle">2 réplicas</text>
+<text x="1210.0" y="471" class="detail" text-anchor="middle">Puerto contenedor: 8080</text>
+<rect x="1080" y="550" width="260" height="100" rx="14" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+<text x="1210.0" y="584" class="label" text-anchor="middle">LoadBalancer</text>
+<text x="1210.0" y="612" class="detail" text-anchor="middle">8080 → 8080</text>
+<text x="1210.0" y="636" class="detail" text-anchor="middle">Service → contenedor</text>
+<path d="M1210 550V500" class="line"/>
+<path d="M190 270V365" class="line"/>
+<text x="190" y="261" class="small" text-anchor="middle">Acceso externo</text>
+<path d="M530 270V365" class="line"/>
+<text x="530" y="261" class="small" text-anchor="middle">Acceso externo</text>
+<path d="M1210 270V365" class="line"/>
+<text x="1210" y="261" class="small" text-anchor="middle">Acceso externo</text>
+<path d="M190 270H1210" fill="none" stroke="#475569" stroke-width="2.5"/>
+<path d="M700 230V270" fill="none" stroke="#475569" stroke-width="2.5"/>
+<path d="M660 595H725" class="line"/>
+<text x="700" y="530" class="small" text-anchor="middle">Red interna</text>
+<text x="700" y="722" class="detail" text-anchor="middle">MongoDB solo se publica dentro del cluster. La API .NET utiliza Amazon SES fuera del cluster.</text>
+</svg>
